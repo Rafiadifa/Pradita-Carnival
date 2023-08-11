@@ -4,15 +4,20 @@
 }
 
 #banner {
-  background: linear-gradient(rgba(0,0,0,0.5),#264a85), url(Images/BG1.jpeg);
+  background: linear-gradient(rgba(0,0,0,0.005),#264a85), url(Images/BG1.jpeg);
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
 
+.ROHIS {
+  font-size: 28px;
+}
+
 .Icon {
-  margin-left: 4%;
-  width: 200px;
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 100px;
   position: absolute;
 }
 
@@ -114,10 +119,22 @@ nav ul li a{
 
 }
 
+@media screen and (max-width: 770px) {
+    .banner-text h1 {
+    font-size: 44px;
+    }
+    .banner-btn a {
+      display: block;
+      margin: 20px auto;
+    }
+}
+
 #HOME {
   width: 100%;
   padding: 70px 0;
 }
+
+/*--HOME--*/
 
 .title-text {
   text-align: center;
@@ -168,12 +185,24 @@ nav ul li a{
 .Home-img {
   flex-basis: 50%;
   margin: auto;
+  position: relative; /* Ensure relative positioning for overlay */
 }
 
 .Home-img img {
   width: 70%;
   border-radius: 10px;
-  background: linear-gradient(#264a85,white);
+}
+
+.grad {
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: linear-gradient(rgba(0,0,0,0.05),#264a85);
+
 }
 
 .Homes h1 {
@@ -186,10 +215,10 @@ nav ul li a{
 .HOME-desc {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
 }
 
-/*.HOME-icon fa {
+.HOME-icon .fa {
   width: 50px;
   height: 50px;
   font-size: 30px;
@@ -197,9 +226,122 @@ nav ul li a{
   border-radius: 8px;
   border: 1px solid #264a85;
   color: #264a85;
-}*/
+  display: inline-block;
+}
 
 .HOME-text p {
   padding: 0 20px;
   text-align: initial;
 }
+
+@media screen and (max-width: 770px) {
+  .title-text h1 {
+    font-size: 35px;
+  }
+  .HOMES {
+    flex-basis: 100%;
+  }
+  .Home-img {
+    flex-basis: 100%;
+    margin: auto;
+  }
+
+  .Home-img img {
+    width: 100%;
+  }
+}
+
+/*--PRODUCTS--*/
+
+#products  {
+  width: 100%;
+  padding: 70px 0;
+  background: #efefef;
+}
+
+.products-box {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.bazaar-size {
+  flex-basis: 48%;
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+}
+
+.bazaar-size img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0,0,0,0.5),#264a85);
+  text-align: center;
+  opacity: 0;
+  transition: 1s;
+}
+
+.bazaar-size:hover .overlay {
+  opacity: 1;
+}
+
+.products-desc {
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 1s;
+}
+
+hr {
+  background: white;
+  border: 0;
+  height: 2px;
+  margin: 15px auto;
+  width: 60%;
+}
+
+.products-desc p {
+  font-size: 14px;
+}
+
+.bazaar-size:hover .products-desc {
+  bottom: 40%;
+  opacity: 1;
+}
+
+@media screen and (max-width: 770px) {
+  .bazaar-size {
+     flex-basis: 100%;
+     margin-bottom: 30px;
+  }
+  .products-desc p {
+      font-size: 12px;
+  }
+
+  hr {
+    margin: 5px auto;
+  }
+
+  .bazaar-size:hover .products-desc {
+    bottom: 25% !important;
+  }
+}
+
+/*---Sign-Up---*/
+
